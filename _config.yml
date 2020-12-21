@@ -21,11 +21,6 @@ nonce: a671871a966400ff97d0293ed2e1568c
 state: abcdefghijklmnopabcdefghijklmnop
 
 
-# Build settings
-theme: minima
-plugins:
-  - jekyll-feed
-
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
