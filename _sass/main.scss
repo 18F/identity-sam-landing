@@ -1,0 +1,30 @@
+.sign-in-wrapper {
+  display: flex !important;
+  align-items: center;
+}
+
+.sign-in-logo {
+  background-color: transparent;
+  height: 27px;
+  padding: 7px 6px 6px;
+  margin-left: 0.2rem;
+  border: 1px solid $light-blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    border-color: $blue;
+  }
+
+  button {
+    font-size: 1.28rem;
+    color: transparent;
+    border: none;
+    background: url(../img/logo_sign_in.svg) center/contain no-repeat;
+
+    &:hover {
+      color: transparent;
+    }
+  }
+}

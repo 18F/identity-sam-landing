@@ -1,6 +1,5 @@
 ---
 # front matter tells Jekyll to process Liquid
-title: SAM Landing
 ---
 
 <!doctype html>
@@ -13,11 +12,7 @@ title: SAM Landing
     <meta name="MobileOptimized" content="320">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    {% capture title -%}
-      {% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif -%}
-    {% endcapture -%}
-
-    <title>{{ title }}</title>
+    <title>{{ site.title }}</title>
     <meta property="og:title" content="{{ title }}">
 
     {% if page.lead -%}
@@ -25,8 +20,8 @@ title: SAM Landing
       <meta property="og:description" content="{{ page.lead | strip_html }}">
     {% endif -%}
 
-    <link rel="shortcut icon" type="image/ico" href="{{ site.baseurl }}/assets/images/favicons/favicon.ico">
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css">
+    <link rel="shortcut icon" type="image/ico" href="{{ site.baseurl }}/assets/img/favicons/favicon.ico">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/all-styles.css">
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
   </head>
 
@@ -34,13 +29,16 @@ title: SAM Landing
     <main class="usa-layout-docs usa-section" id="main-content">
       <div class="grid-container">
         <div class="usa-layout-docs__main usa-prose">
-          <img src="{{ site.baseurl }}/assets/images/sam.png" />
-          <div class="usa-display">SAM Identity Proofing</div>
+          <img src="{{ site.baseurl }}/assets/img/sam.png" />
+          <div class="usa-display">Lorem Ipsum</div>
 
           <p>
-            This button will take you to Login.gov where you can create an account and have your
-            identity proofed. This will prepare you for using SAM.gov once they complete their integration
-            with Login.gov.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            mollit anim id est laborum.
           </p>
 
           <form action={{site.idp_host}}{{site.idp_path}} method="get">
@@ -53,9 +51,13 @@ title: SAM Landing
             <input name="code_challenge_method" value="S256" type="hidden" />
             <input name="response_type" value="code" type="hidden" />
             <input name="scope" value="openid" type="hidden" />
-            <button class="usa-button">
-              Go to Login.gov
-            </button>
+
+            <div class="sign-in-wrapper">
+              <span class="font-sans-md"><strong>Sign in with:</strong></span>
+              <span class="usa-button--small sign-in-logo sign-in-logo-padding" aria-label="Login.gov" tabindex="0">
+                <button>Login.gov</button>
+              </span>
+            </div>
           </form>
         </div>
       </div>
