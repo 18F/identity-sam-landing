@@ -10,7 +10,7 @@ test: build
 build: install-dependencies
 	bundle exec jekyll build
 
-install-dependencies: bundle npm
+install-dependencies: bundle
 
 npm:
 	npm ci

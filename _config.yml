@@ -1,17 +1,3 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you:
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
 # Site settings
 # These are used to personalize your new site. If you look in the HTML files,
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
@@ -23,8 +9,17 @@ description: >- # this means to ignore newlines until "baseurl:"
   A bare-bones landing page to allow SAM users to begin identity proofing.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+
+# Login.gov
+issuer: urn:gov:gsa:openidconnect.profiles:sp:sso:gsa:sam-landing
+acr_values: http://idmanagement.gov/ns/assurance/ial/2
+idp_host: http://localhost:3000
+idp_path: /openid_connect/authorize
+redirect_uri: http://localhost:3000/account
+code_challenge: V2tWeJa2r0hv/Ek8BnH0COG3sjf9NIZ5gkc4C30y+vg
+nonce: a671871a966400ff97d0293ed2e1568c
+state: abcdefghijklmnopabcdefghijklmnop
+
 
 # Build settings
 theme: minima

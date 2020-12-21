@@ -1,0 +1,61 @@
+---
+# front matter tells Jekyll to process Liquid
+title: SAM Landing
+---
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% capture title -%}
+      {% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif -%}
+    {% endcapture -%}
+
+    <title>{{ title }}</title>
+    <meta property="og:title" content="{{ title }}">
+
+    {% if page.lead -%}
+      <meta name="description" content="{{ page.lead | strip_html }}">
+      <meta property="og:description" content="{{ page.lead | strip_html }}">
+    {% endif -%}
+
+    <link rel="shortcut icon" type="image/ico" href="{{ site.baseurl }}/assets/img/favicons/favicon.ico">
+    <!--
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
+    -->
+  </head>
+
+  <body>
+    <h1>SAM Landing</h1>
+
+    <p>
+      This button will take you to Login.gov where you can create an account and have your
+      identity proofed. This will prepare you for using SAM.gov once they complete their integration
+      with Login.gov.
+    </p>
+
+    <form action={{site.idp_host}}{{site.idp_path}} method="get">
+      <input name="client_id" value={{ site.issuer }} type="hidden" />
+      <input name="acr_values" value={{ site.acr_values }} type="hidden" />
+      <input name="redirect_uri" value={{ site.redirect_uri }} type="hidden" />
+      <input name="nonce" value={{ site.nonce }} type="hidden" />
+      <input name="state" value={{ site.state }} type="hidden" />
+      <input name="code_challenge" value={{ site.code_challenge }} type="hidden" />
+      <input name="code_challenge_method" value="S256" type="hidden" />
+      <input name="response_type" value="code" type="hidden" />
+      <input name="scope" value="openid" type="hidden" />
+      <button>
+        Go to Login.gov
+      </button>
+    </form>
+
+    <script async type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=GSA&subagency=TTS" id="_fed_an_ua_tag"></script>
+  </body>
+</html>
