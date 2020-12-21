@@ -20,6 +20,8 @@ code_challenge: V2tWeJa2r0hv/Ek8BnH0COG3sjf9NIZ5gkc4C30y+vg
 nonce: a671871a966400ff97d0293ed2e1568c
 state: abcdefghijklmnopabcdefghijklmnop
 
+copy_to_destination:
+  - node_modules/identity-style-guide/dist/assets
 
 # Exclude from processing.
 # The following items will not be processed, by default.

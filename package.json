@@ -1,0 +1,22 @@
+{
+  "name": "identity-sam-landing",
+  "version": "1.0.0",
+  "description": "Simple landing page for SAM user creation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/18F/identity-sam-landing.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/18F/identity-sam-landing/issues"
+  },
+  "homepage": "https://github.com/18F/identity-sam-landing#readme",
+  "dependencies": {
+    "identity-style-guide": "^3.0.0"
+  }
+}

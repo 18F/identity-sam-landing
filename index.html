@@ -4,7 +4,7 @@ title: SAM Landing
 ---
 
 <!doctype html>
-<html>
+<html height="100%">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,38 +26,41 @@ title: SAM Landing
     {% endif -%}
 
     <link rel="shortcut icon" type="image/ico" href="{{ site.baseurl }}/assets/images/favicons/favicon.ico">
-    <!--
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css">
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
-    -->
   </head>
 
   <body>
-    <img src="{{ site.baseurl }}/assets/images/sam.png" />
-    <h1>
-      SAM Identity Proofing
-    </h1>
+    <main class="usa-layout-docs usa-section" id="main-content">
+      <div class="grid-container">
+        <div class="usa-layout-docs__main usa-prose">
+          <img src="{{ site.baseurl }}/assets/images/sam.png" />
+          <div class="usa-display">SAM Identity Proofing</div>
 
-    <p>
-      This button will take you to Login.gov where you can create an account and have your
-      identity proofed. This will prepare you for using SAM.gov once they complete their integration
-      with Login.gov.
-    </p>
+          <p>
+            This button will take you to Login.gov where you can create an account and have your
+            identity proofed. This will prepare you for using SAM.gov once they complete their integration
+            with Login.gov.
+          </p>
 
-    <form action={{site.idp_host}}{{site.idp_path}} method="get">
-      <input name="client_id" value={{ site.issuer }} type="hidden" />
-      <input name="acr_values" value={{ site.acr_values }} type="hidden" />
-      <input name="redirect_uri" value={{ site.redirect_uri }} type="hidden" />
-      <input name="nonce" value={{ site.nonce }} type="hidden" />
-      <input name="state" value={{ site.state }} type="hidden" />
-      <input name="code_challenge" value={{ site.code_challenge }} type="hidden" />
-      <input name="code_challenge_method" value="S256" type="hidden" />
-      <input name="response_type" value="code" type="hidden" />
-      <input name="scope" value="openid" type="hidden" />
-      <button>
-        Go to Login.gov
-      </button>
-    </form>
+          <form action={{site.idp_host}}{{site.idp_path}} method="get">
+            <input name="client_id" value={{ site.issuer }} type="hidden" />
+            <input name="acr_values" value={{ site.acr_values }} type="hidden" />
+            <input name="redirect_uri" value={{ site.redirect_uri }} type="hidden" />
+            <input name="nonce" value={{ site.nonce }} type="hidden" />
+            <input name="state" value={{ site.state }} type="hidden" />
+            <input name="code_challenge" value={{ site.code_challenge }} type="hidden" />
+            <input name="code_challenge_method" value="S256" type="hidden" />
+            <input name="response_type" value="code" type="hidden" />
+            <input name="scope" value="openid" type="hidden" />
+            <button class="usa-button">
+              Go to Login.gov
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+
 
     <script async type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=GSA&subagency=TTS" id="_fed_an_ua_tag"></script>
   </body>
