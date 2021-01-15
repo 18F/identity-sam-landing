@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/18F/identity-sam-landing#readme",
   "dependencies": {
-    "identity-style-guide": "^3.0.0"
+    "uswds": "^2.10.0"
   }
 }
