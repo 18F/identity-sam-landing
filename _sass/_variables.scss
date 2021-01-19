@@ -1,2 +1,4 @@
-$blue: #0071bb !default;
-$light-blue: #cedced !default;
+$theme-color-secondary: #70e17b;
+$theme-color-secondary-dark: darken($theme-color-secondary, 10%);
+$theme-color-secondary-darker: darken($theme-color-secondary, 20%);
+$theme-font-role-heading: 'sans';

@@ -1,69 +1,71 @@
 ---
-# front matter tells Jekyll to process Liquid
+layout: main
 ---
 
-<!doctype html>
-<html height="100%">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<img
+  src="{{ site.baseurl }}/assets/img/login-gov.png"
+  width="193"
+  height="26"
+  alt="login.gov logo"
+  class="margin-bottom-4"
+>
 
-    <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="320">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<div class="grid-row grid-gap padding-bottom-1">
+  <div class="grid-col-12 desktop:grid-col-7">
+    <div class="usa-prose">
+      <h1>Verify your identity with login.gov</h1>
 
-    <title>{{ site.title }}</title>
-    <meta property="og:title" content="{{ title }}">
+      <p>If you create or renew an entity registration at SAM.gov after <strong>April 26, 2021</strong>, you will need to first verify your identity at login.gov</p>
 
-    {% if page.lead -%}
-      <meta name="description" content="{{ page.lead | strip_html }}">
-      <meta property="og:description" content="{{ page.lead | strip_html }}">
-    {% endif -%}
+      <p class="padding-top-2">To verify your identity, you’ll need:</p>
 
-    <link rel="shortcut icon" type="image/ico" href="assets/img/favicons/favicon.ico">
-    <link rel="stylesheet" href="assets/css/all-styles.css">
-    <link rel="stylesheet" href="assets/css/main.css">
-  </head>
+      <ul>
+        <li><strong>Your Social Security Number</strong></li>
+        <li><strong>A phone number on a phone plan that is in your name</strong></li>
+        <li>
+          <strong>A valid government issued ID from the following list:</strong>
+          <ul>
+            <li>Drivers license</li>
+            <li>State-issued photo ID</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
 
-  <body>
-    <main class="usa-layout-docs usa-section" id="main-content">
-      <div class="grid-container">
-        <div class="usa-layout-docs__main usa-prose">
-          <img src="assets/img/sam.png" />
-          <div class="usa-display">Lorem Ipsum</div>
+    <form action="{{ site.idp_host }}{{ site.idp_path }}" method="get" class="margin-y-4">
+      <input name="client_id" value={{ site.issuer }} type="hidden" />
+      <input name="acr_values" value={{ site.acr_values }} type="hidden" />
+      <input name="redirect_uri" value={{ site.redirect_uri }} type="hidden" />
+      <input name="nonce" value={{ site.nonce }} type="hidden" />
+      <input name="state" value={{ site.state }} type="hidden" />
+      <input name="code_challenge" value={{ site.code_challenge }} type="hidden" />
+      <input name="code_challenge_method" value="S256" type="hidden" />
+      <input name="response_type" value="code" type="hidden" />
+      <input name="scope" value="openid" type="hidden" />
 
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-            mollit anim id est laborum.
-          </p>
+      <button type="submit" class="usa-button usa-button--secondary">Verify my identity</button>
+    </form>
+  </div>
+  <div class="grid-col-12 desktop:grid-col-5">
+    {%- capture why_tip_heading -%}
+      Why does SAM.gov now require identity proofing?
+    {%- endcapture -%}
+    {%- capture why_tip_content -%}
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac ultrices lectus. Vivamus accumsan sapien velit, vel sodales mauris vehicula ut. Cras suscipit quis sem at ultricies. Curabitur accumsan tortor urna, vel blandit tortor lobortis varius. Nunc quam sapien, egestas id nunc nec, interdum rutrum mauris. Fusce ut augue ut diam fermentum egestas.
+    {%- endcapture -%}
+    {% include tip_box.html heading=why_tip_heading content=why_tip_content %}
+  </div>
+</div>
 
-          <form action={{site.idp_host}}{{site.idp_path}} method="get">
-            <input name="client_id" value={{ site.issuer }} type="hidden" />
-            <input name="acr_values" value={{ site.acr_values }} type="hidden" />
-            <input name="redirect_uri" value={{ site.redirect_uri }} type="hidden" />
-            <input name="nonce" value={{ site.nonce }} type="hidden" />
-            <input name="state" value={{ site.state }} type="hidden" />
-            <input name="code_challenge" value={{ site.code_challenge }} type="hidden" />
-            <input name="code_challenge_method" value="S256" type="hidden" />
-            <input name="response_type" value="code" type="hidden" />
-            <input name="scope" value="openid" type="hidden" />
+<hr />
 
-            <div class="sign-in-wrapper">
-              <span class="font-sans-md"><strong>Sign in with:</strong></span>
-              <span class="usa-button--small sign-in-logo sign-in-logo-padding" aria-label="Login.gov" tabindex="0">
-                <button>Login.gov</button>
-              </span>
-            </div>
-          </form>
-        </div>
-      </div>
-    </main>
+<h2>Frequently asked questions about identity verification</h2>
 
-
-    <script async type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=GSA&subagency=TTS" id="_fed_an_ua_tag"></script>
-  </body>
-</html>
+<div class="grid-row">
+  <div class="grid-col-12 desktop:grid-col-10">
+    {% for faq in site.data.faqs %}
+      {% capture faq_id %}faq-{{ forloop.index }}{% endcapture %}
+      {% include accordion.html id=faq_id question=faq.question answer=faq.answer %}
+    {% endfor %}
+  </div>
+</div>

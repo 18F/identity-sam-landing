@@ -1,0 +1,43 @@
+- question: What if I don’t have a login.gov account?
+  answer: |-
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac ultrices lectus. Vivamus accumsan sapien velit, vel sodales mauris vehicula ut. Cras suscipit quis sem at ultricies. Curabitur accumsan tortor urna, vel blandit tortor lobortis varius. Nunc quam sapien, egestas id nunc nec, interdum rutrum mauris. Fusce ut augue ut diam fermentum egestas.
+
+- question: How do you protect my personal information?
+  answer: |-
+    Login.gov encrypts the sensitive personal information of each user separately using a unique value generated from each user’s password. Our encryption method works like a safe deposit box in a bank vault. Only the user has the key. Only the user can open the box to reveal the contents. Only the user knows the password, and only the user can decrypt their information.
+
+- question: What if I can’t verify my identity?
+  answer: |-
+    SAM.gov uses login.gov to verify your identity. This means that you must prove that you are who you say you are. By doing this, we make sure that only the right people get access to sensitive information.
+
+    You will only be asked to verify your identity the first time you sign in to certain government applications.
+
+    You only need to verify your identity once for your login.gov account (after you verify your identity with login.gov for one government application, you don’t need to do it again for other government applications).
+
+- question: Do I still need a notarized letter on file?
+  answer: |-
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac ultrices lectus. Vivamus accumsan sapien velit, vel sodales mauris vehicula ut. Cras suscipit quis sem at ultricies. Curabitur accumsan tortor urna, vel blandit tortor lobortis varius. Nunc quam sapien, egestas id nunc nec, interdum rutrum mauris. Fusce ut augue ut diam fermentum egestas.
+
+- question: Why do you need a photo ID?
+  answer: |-
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac ultrices lectus. Vivamus accumsan sapien velit, vel sodales mauris vehicula ut. Cras suscipit quis sem at ultricies. Curabitur accumsan tortor urna, vel blandit tortor lobortis varius. Nunc quam sapien, egestas id nunc nec, interdum rutrum mauris. Fusce ut augue ut diam fermentum egestas.
+
+- question: What do you do with my photo ID?
+  answer: |-
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac ultrices lectus. Vivamus accumsan sapien velit, vel sodales mauris vehicula ut. Cras suscipit quis sem at ultricies. Curabitur accumsan tortor urna, vel blandit tortor lobortis varius. Nunc quam sapien, egestas id nunc nec, interdum rutrum mauris. Fusce ut augue ut diam fermentum egestas.
+
+- question: What personal information is stored about me?
+  answer: |-
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac ultrices lectus. Vivamus accumsan sapien velit, vel sodales mauris vehicula ut. Cras suscipit quis sem at ultricies. Curabitur accumsan tortor urna, vel blandit tortor lobortis varius. Nunc quam sapien, egestas id nunc nec, interdum rutrum mauris. Fusce ut augue ut diam fermentum egestas.
+
+- question: How long will it take to verify my identity?
+  answer: |-
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac ultrices lectus. Vivamus accumsan sapien velit, vel sodales mauris vehicula ut. Cras suscipit quis sem at ultricies. Curabitur accumsan tortor urna, vel blandit tortor lobortis varius. Nunc quam sapien, egestas id nunc nec, interdum rutrum mauris. Fusce ut augue ut diam fermentum egestas.
+
+- question: What phone number should I use?
+  answer: |-
+    You should use a phone number on a phone plan that is in your name. If you do not have a phone plan that is in your name, we can send you the verification code by mail which takes approximately 3-5 days.
+
+- question: What if I am registering a foreign entity?
+  answer: |-
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac ultrices lectus. Vivamus accumsan sapien velit, vel sodales mauris vehicula ut. Cras suscipit quis sem at ultricies. Curabitur accumsan tortor urna, vel blandit tortor lobortis varius. Nunc quam sapien, egestas id nunc nec, interdum rutrum mauris. Fusce ut augue ut diam fermentum egestas.

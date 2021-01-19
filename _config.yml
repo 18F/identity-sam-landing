@@ -21,7 +21,8 @@ nonce: a671871a966400ff97d0293ed2e1568c
 state: abcdefghijklmnopabcdefghijklmnop
 
 copy_to_destination:
-  - node_modules/identity-style-guide/dist/assets
+  - source: node_modules/uswds/dist/{js,fonts,img}
+    target: assets
 
 # Exclude from processing.
 # The following items will not be processed, by default.
